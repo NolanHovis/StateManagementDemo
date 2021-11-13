@@ -1,0 +1,20 @@
+<div class="container bordered-form">
+  <div class="row">
+    <div class="col-12 mt-5 mb-4 d-inline-flex">
+      <h1 class="flex">Login</h1>
+      <p class="flex ms-auto fs-7 mt-auto">
+        Want to go to the home page?<a
+          class="ms-2 fs-7"
+          [routerLink]="['/home']"
+          >Go Home</a
+        >
+      </p>
+    </div>
+    <form [formGroup]="userForm" class="form">
+      <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <div class="input-group"></div>
+      </div>
+    </form>
+  </div>
+</div>
