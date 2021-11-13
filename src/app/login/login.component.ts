@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   submitting = false;
   hasError = false;
   hidePass = true;
+  errorMsg: string;
   private userSub = new Subscription();
 
   constructor(
@@ -41,20 +42,21 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.userForm = this.fb.group(this.formValues);
   }
 
-  get form() {
-    if (this.form && this.form.controls) {
-      return this.form.controls;
-    }
-  }
+  // get form() {
+  //   debugger;
+  //   if (this.form && this.form.controls) {
+  //     return this.form.controls;
+  //   }
+  // }
 
   submitForm() {
     this.submitting = true;
-    if (!this.form.valid) {
+    if (!this.userForm.valid) {
       this.submitting = false;
       this.hasError = true;
       return;
     }
-    const params = this.form.value;
+    const params = this.userForm.value;
     this.userSub = this.userService.login(params).subscribe(
       (data) => {
         if (data) {
@@ -66,7 +68,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       (error) => {
         if (error) {
           const errMsg = 'There was an error!';
-          console.log(errMsg);
+          this.errorMsg = errMsg;
           this.hasError = true;
           this.submitting = false;
         }

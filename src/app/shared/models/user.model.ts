@@ -4,6 +4,7 @@ export class User {
   id: number;
   first_name: string;
   last_name: string;
+  user_type: string;
   email: string;
   password: string;
 
@@ -11,6 +12,7 @@ export class User {
     id = 0,
     first_name = '',
     last_name = '',
+    user_type = '',
     email = '',
     password = '',
     ...rest
@@ -27,6 +29,7 @@ export class User {
     this.id = id;
     this.first_name = first_name;
     this.last_name = last_name;
+    this.user_type = user_type;
     this.email = email;
     this.password = password;
   }
