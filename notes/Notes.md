@@ -15,6 +15,7 @@ It is then able to be seen by the app.
 
 ## State Management Flow Chart
 ![State Management Flow Chart](./State-Management_Services-Local-Storage.png)
+![State Management Flow Chart](./Already_Logged_In.png)
 <hr />
 
 # Step 1: Create a Basic layout for our App
