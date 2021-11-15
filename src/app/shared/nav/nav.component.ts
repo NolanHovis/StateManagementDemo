@@ -10,7 +10,6 @@ import { UserService } from '../services/user.service';
 })
 export class NavComponent implements OnInit, OnDestroy {
   collapsed = true;
-  show = false;
   currentUser: User;
   private userSub = new Subscription();
 

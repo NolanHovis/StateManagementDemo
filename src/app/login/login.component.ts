@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   formValues: any;
   submitting = false;
   hasError = false;
-  hidePass = true;
   errorMsg: string;
   private userSub = new Subscription();
 

@@ -28,11 +28,6 @@ export class UserService {
     this.currentUser = this.currentUserSubject.asObservable();
   }
 
-  // TODO: Ask zach what this is for
-  public get currentUserValue(): User {
-    return this.currentUserSubject.value;
-  }
-
   setCurrentUser(user: User) {
     this.currentUserSubject.next(user);
   }
