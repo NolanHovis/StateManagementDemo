@@ -12,10 +12,6 @@ information, and more.
 When our user logs in, the data from the database is found through the user service(where the login, logout, etc. logic is found)
 Then it takes that information to a local storage service that send the data to the browser's local storage.
 It is then able to be seen by the app.
-
-## State Management Flow Chart
-![State Management Flow Chart](./State-Management_Services-Local-Storage.png)
-![State Management Flow Chart](./Already_Logged_In.png)
 <hr />
 
 # Step 1: Create a Basic layout for our App
